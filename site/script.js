@@ -8,7 +8,7 @@
     root.dataset.theme = theme;
     themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     themeButton.textContent = theme === 'dark' ? '☼' : '☾';
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#261f2c' : '#fff8fb';
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0b121c' : '#f6f8fb';
   };
   applyTheme(readSetting('mansi-soft-theme') === 'dark' ? 'dark' : 'light');
   themeButton.addEventListener('click', () => {
@@ -22,3 +22,4 @@
     catch { status.textContent = 'Select the email address above to copy it, or click it to write an email.'; }
   });
 })();
+
