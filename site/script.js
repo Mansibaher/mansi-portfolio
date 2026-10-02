@@ -8,7 +8,7 @@
     root.dataset.theme = theme;
     themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     themeButton.textContent = theme === 'dark' ? '☼' : '☾';
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0c1011' : '#f3f5f2';
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101215' : '#f5f4f1';
   };
   applyTheme(readSetting('mansi-studio-theme') === 'light' ? 'light' : 'dark');
   themeButton.addEventListener('click', () => {
