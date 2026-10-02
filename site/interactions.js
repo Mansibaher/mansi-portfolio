@@ -12,7 +12,7 @@
     document.getElementById('project-list').classList.toggle('grid-view',view==='grid');
     document.querySelectorAll('[data-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===view)));
   };
-  setView(storage.get('mansi-project-view')==='grid'?'grid':'list');
+  setView(storage.get('mansi-project-view')==='list'?'list':'grid');
   document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{setView(button.dataset.view);storage.set('mansi-project-view',button.dataset.view);}));
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   function selectTab(tab){tabs.forEach(item=>{const selected=item===tab;item.setAttribute('aria-selected',String(selected));item.tabIndex=selected?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!selected;});}

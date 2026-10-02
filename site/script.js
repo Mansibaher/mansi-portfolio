@@ -8,12 +8,12 @@
     root.dataset.theme = theme;
     themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     themeButton.textContent = theme === 'dark' ? '☼' : '☾';
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0b121c' : '#f6f8fb';
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0c1011' : '#f3f5f2';
   };
-  applyTheme(readSetting('mansi-soft-theme') === 'dark' ? 'dark' : 'light');
+  applyTheme(readSetting('mansi-studio-theme') === 'light' ? 'light' : 'dark');
   themeButton.addEventListener('click', () => {
     const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    applyTheme(theme); saveSetting('mansi-soft-theme', theme);
+    applyTheme(theme); saveSetting('mansi-studio-theme', theme);
   });
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('copy-email').addEventListener('click', async () => {
