@@ -41,3 +41,7 @@ Corrected the website MRI description against src/utils.py, src/train.py, and sr
 DevPilot source commit checked: bad3ef04836d25e4a095b4ffa2fb87ac22742070. Its demo and screenshot were copied from the existing project; no new project performance benchmark was run.
 
 Checked all local page/file/anchor references, media loading (30-second video), desktop and mobile DevPilot layout, and navigation between the homepage and research overview. Hosting is pending the choice of replacing the existing Vercel site or using a new address.
+
+## RoleMatch addition
+
+Added RoleMatch as the first project card (`rolematch*.png` are screenshots of the running local application's demo account, which uses a synthetic résumé and fictional postings). Benchmark figures quoted in its description come from the project's committed evaluation (`eval/results/results.md`) and are labelled as a synthetic, self-labelled sanity check. The source link points to github.com/Mansibaher/rolematch; publish that repository before deploying this change. Project-card labels that previously depended on list position now come from a `demoLabel` field, and the project count is computed.
